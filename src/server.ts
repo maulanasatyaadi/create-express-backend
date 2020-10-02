@@ -24,7 +24,8 @@ mongoose
 let server = express()
 
 server.use(bodyParser.json())
-server.use(bodyParser.urlencoded({ extended: true }))
+server.use(bodyParser.urlencoded({extended: true}))
+server.use(fileUpload({createParentPath: true, useTempFiles: true}))
 
 server.get('/', (req, res) => {
   res.json({
