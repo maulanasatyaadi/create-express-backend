@@ -1,4 +1,3 @@
-import express from 'express'
 import bodyParser from 'body-parser'
 import express from 'express'
 import fileUpload from 'express-fileupload'
@@ -38,6 +37,5 @@ server.get('/', (req, res) => {
 })
 
 server.listen(PORT, () => {
-  console.log('Server has started')
+  console.log(`Server has started at port ${PORT}`)
 })
-
