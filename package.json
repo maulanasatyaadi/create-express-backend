@@ -1,7 +1,7 @@
 {
-  "name": "musikord-backend",
+  "name": "express-backend",
   "version": "1.0.0",
-  "description": "Musikord Backend",
+  "description": "Express Backend",
   "main": "dist/main.js",
   "author": "Maulana Satya Adi <maulanasatyaadi@gmail.com>",
   "license": "MIT",
@@ -25,8 +25,7 @@
     "check-types": "tsc",
     "start": "nodemon",
     "build": "babel ./src --out-dir dist --extensions '.ts' --source-maps inline",
-    "serve": "node dist/server.js",
-    "up": "yarn build && scp -r -P 1400 dist/* package.json skillrace-ssh:/var/www/certificate-backend/"
+    "serve": "node dist/server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
