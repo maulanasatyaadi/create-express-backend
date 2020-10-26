@@ -2,7 +2,7 @@
   "name": "express-backend",
   "version": "1.0.0",
   "description": "Express Backend",
-  "main": "dist/main.js",
+  "main": "dist/server.js",
   "author": "Maulana Satya Adi <maulanasatyaadi@gmail.com>",
   "license": "MIT",
   "private": true,
