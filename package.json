@@ -28,7 +28,7 @@
   "scripts": {
     "check-types": "tsc",
     "start": "nodemon",
-    "build": "babel ./src --out-dir dist --extensions '.ts' --source-maps inline",
+    "build": "babel ./src --out-dir dist --extensions .ts --source-maps inline",
     "serve": "node dist/server.js"
   },
   "dependencies": {
