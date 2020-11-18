@@ -2,6 +2,7 @@ This is a starter template for who want to make typically backend application us
 - Typescript
 - Babel
 - Nodemon
+- Jest and superset
 
 Common dependency:
 - bcrypt
