@@ -21,7 +21,6 @@
     "@types/express-fileupload": "^1.1.4",
     "@types/jest": "^26.0.15",
     "@types/jsonwebtoken": "^8.5.0",
-    "@types/mongoose": "^5.7.36",
     "@types/node": "^14.14.8",
     "@types/supertest": "^2.0.10",
     "@types/temp": "^0.8.34",
