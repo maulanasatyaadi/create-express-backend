@@ -6,8 +6,7 @@ This is a starter template for who want to make typically backend application us
 
 Common dependency:
 - bcrypt
-- body-parser
 - express
-- express-fileupload
+- multer
 - jsonwebtoken
 - mongoose
