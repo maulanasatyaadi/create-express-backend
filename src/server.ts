@@ -1,7 +1,8 @@
 import dotenv from 'dotenv'
-import express, { json, urlencoded } from 'express'
+import express, { json, Response, urlencoded } from 'express'
 import mongoose from 'mongoose'
 import process from 'process'
+import APIResponse from './interfaces/APIResponse'
 
 dotenv.config()
 
@@ -26,13 +27,13 @@ let server = express()
 server.use(json())
 server.use(urlencoded({extended: true}))
 
-server.get('/', (req, res) => {
-  res.json({
+server.get('/', ({res}: {res: Response}): void => {
+  res.json(<APIResponse>{
     success: true,
-    result: {
-      message: new Date(),
-      error: null
-    }
+    message: {
+      timestamp: Date.now()
+    },
+    error: null
   })
 })
 
