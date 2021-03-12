@@ -1,8 +1,9 @@
-import bodyParser from 'body-parser'
-import express from 'express'
-import fileUpload from 'express-fileupload'
+import dotenv from 'dotenv'
+import express, { json, urlencoded } from 'express'
 import mongoose from 'mongoose'
 import process from 'process'
+
+dotenv.config()
 
 const PORT = process.env.PORT || 3000
 const MONGODB_URL = process.env.MONGODB_URL || 'mongodb://localhost:27017/appdb'
@@ -11,7 +12,7 @@ mongoose
   .connect(MONGODB_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useFindAndModify: true,
+    useFindAndModify: false,
     useCreateIndex: true
   })
   .then(() => console.log('Connected to MongoDB'))
@@ -22,9 +23,8 @@ mongoose
 
 let server = express()
 
-server.use(bodyParser.json())
-server.use(bodyParser.urlencoded({extended: true}))
-server.use(fileUpload({createParentPath: true, useTempFiles: true}))
+server.use(json())
+server.use(urlencoded({extended: true}))
 
 server.get('/', (req, res) => {
   res.json({
